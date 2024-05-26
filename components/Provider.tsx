@@ -3,12 +3,13 @@
 import { SessionProvider } from "next-auth/react";
 import { Session } from "next-auth";
 
-const Provider = ({
-  children,
-  session,
-}: {
+type ProviderProps = {
   children: React.ReactNode;
-  session: Session;
-}) => <SessionProvider session={session}>{children}</SessionProvider>;
+  session?: Session;
+};
+
+const Provider = ({ children, session }: ProviderProps) => (
+  <SessionProvider session={session}>{children}</SessionProvider>
+);
 
 export default Provider;

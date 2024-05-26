@@ -11,15 +11,13 @@ export const metadata = {
 
 const RootLayout = ({
   children,
-  session,
 }: {
   children: React.ReactNode;
-  session: Session;
 }) => {
   return (
     <html lang="en">
       <body>
-        <Provider session={session}>
+        <Provider>
           <div className="main">
             <div className="gradient" />
           </div>
