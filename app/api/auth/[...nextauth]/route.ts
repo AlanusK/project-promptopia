@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import { connectToDB } from "@utils/Database";
+import { connectToDB } from "@utils/database";
 import User from "@models/user";
 import { Error } from "mongoose";
 
@@ -32,7 +32,7 @@ const handler = NextAuth({
           await User.create({
             email: profile?.email,
             username: profile?.name?.replace(" ", "").toLowerCase(),
-            image: profile?.picture
+            image: profile?.picture,
           });
         }
 
