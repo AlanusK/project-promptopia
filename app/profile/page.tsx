@@ -8,7 +8,7 @@ import Profile from "@components/Profile";
 import { PromptType } from "@/types/custom-types";
 
 const MyProfile = () => {
-  //   const router = useRouter();
+  const router = useRouter();
   const { data: session } = useSession();
 
   const [myPosts, setMyPosts] = useState<Array<PromptType>>([]);
@@ -24,9 +24,9 @@ const MyProfile = () => {
     if (session?.user.id) fetchPosts();
   }, [session?.user.id]);
 
-  //   const handleEdit = (post) => {
-  //     router.push(`/update-prompt?id=${post._id}`);
-  //   };
+  const handleEdit = (post: PromptType) => {
+    router.push(`/update-prompt?id=${post._id}`);
+  };
 
   //   const handleDelete = async (post) => {
   //     const hasConfirmed = confirm(
@@ -53,7 +53,7 @@ const MyProfile = () => {
       name="My"
       desc="Welcome to your personalized profile page. Share your exceptional prompts and inspire others with the power of your imagination"
       data={myPosts}
-      // handleEdit={handleEdit}
+      handleEdit={handleEdit}
       // handleDelete={handleDelete}
     />
   );

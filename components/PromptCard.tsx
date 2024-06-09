@@ -9,12 +9,14 @@ import { PromptType } from "@/types/custom-types";
 const PromptCard = ({
   post,
   handleTagClick,
+  handleEdit,
 }: {
   post: PromptType;
   handleTagClick?: any;
+  handleEdit?: MouseEventHandler<HTMLParagraphElement>;
 }) => {
   const { data: session } = useSession();
-  // const pathName = usePathname();
+  const pathName = usePathname();
   const router = useRouter();
 
   const [copied, setCopied] = useState<string>("");
@@ -78,22 +80,22 @@ const PromptCard = ({
         #{post.tag}
       </p>
 
-      {/* {session?.user.id === post.creator._id && pathName === "/profile" && (
-        <div className='mt-5 flex-center gap-4 border-t border-gray-100 pt-3'>
+      {session?.user.id === post.creator._id && pathName === "/profile" && (
+        <div className="mt-5 flex-center gap-4 border-t border-gray-100 pt-3">
           <p
-            className='font-inter text-sm green_gradient cursor-pointer'
+            className="font-inter text-sm green_gradient cursor-pointer"
             onClick={handleEdit}
           >
             Edit
           </p>
-          <p
+          {/* <p
             className='font-inter text-sm orange_gradient cursor-pointer'
             onClick={handleDelete}
           >
             Delete
-          </p>
+          </p> */}
         </div>
-      )} */}
+      )}
     </div>
   );
 };
