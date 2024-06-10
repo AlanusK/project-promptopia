@@ -42,3 +42,17 @@ export const PATCH = async (req: Request, { params }: ParamsType) => {
     return new Response("Failed to edit a prompt", { status: 500 });
   }
 };
+
+export const DELETE = async (req: Request, { params }: ParamsType) => {
+  try {
+    await connectToDB();
+
+    await Prompt.findByIdAndDelete(params.id);
+
+    return new Response("Prompt deleted successfully", { status: 200 });
+
+  } catch (error) {
+    return new Response("Failed to delete a prompt", { status: 500 });
+  }
+};
+ 

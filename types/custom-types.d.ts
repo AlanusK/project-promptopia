@@ -12,7 +12,7 @@ export interface ProfileType {
   desc: string;
   data: array<PromptType>;
   handleEdit: MouseEventHandler<HTMLParagraphElement>;
-  // handleDelete: Function;
+  handleDelete: MouseEventHandler<HTMLParagraphElement>;
 }
 
 export type ParamsType = {

@@ -2,7 +2,7 @@ import PromptCard from "./PromptCard";
 import { ProfileType } from "@/types/custom-types";
 import { PromptType } from "@/types/custom-types";
 
-const Profile = ({ name, desc, data, handleEdit }: ProfileType) => {
+const Profile = ({ name, desc, data, handleEdit, handleDelete }: ProfileType) => {
   return (
     <section className="w-full">
       <h1 className="head_text text-left">
@@ -16,7 +16,7 @@ const Profile = ({ name, desc, data, handleEdit }: ProfileType) => {
             key={post._id}
             post={post}
             handleEdit={() => handleEdit && handleEdit(post)}
-            // handleDelete={() => handleDelete && handleDelete(post)}
+            handleDelete={() => handleDelete && handleDelete(post)}
           />
         ))}
       </div>

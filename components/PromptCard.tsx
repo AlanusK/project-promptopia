@@ -10,10 +10,12 @@ const PromptCard = ({
   post,
   handleTagClick,
   handleEdit,
+  handleDelete,
 }: {
   post: PromptType;
   handleTagClick?: any;
   handleEdit?: MouseEventHandler<HTMLParagraphElement>;
+  handleDelete?: MouseEventHandler<HTMLParagraphElement>;
 }) => {
   const { data: session } = useSession();
   const pathName = usePathname();
@@ -88,12 +90,12 @@ const PromptCard = ({
           >
             Edit
           </p>
-          {/* <p
+          <p
             className='font-inter text-sm orange_gradient cursor-pointer'
             onClick={handleDelete}
           >
             Delete
-          </p> */}
+          </p>
         </div>
       )}
     </div>
