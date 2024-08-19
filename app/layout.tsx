@@ -1,7 +1,6 @@
 import "@styles/globals.css";
 
 import Provider from "@components/Provider";
-import { Session } from "next-auth";
 import Nav from "@components/Nav";
 
 export const metadata = {
