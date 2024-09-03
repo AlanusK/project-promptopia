@@ -9,7 +9,7 @@ const PromptCardList = ({
   handleTagClick,
 }: {
   data: Array<PromptType>;
-  handleTagClick: any;
+  handleTagClick: (a: string) => void;
 }) => {
   return (
     <div className="mt-16 prompt_layout">
@@ -58,7 +58,7 @@ const Feed = () => {
   const handleSearchChange = (e: any) => {
     clearTimeout(searchTimeout);
     setSearchText(e.target.value);
-    
+
     // debounce method
     setSearchTimeout(
       setTimeout(() => {
@@ -68,12 +68,13 @@ const Feed = () => {
     );
   };
 
-  //   const handleTagClick = (tagName) => {
-  //     setSearchText(tagName);
+  const handleTagClick = (tagName: string) => {
+    setSearchText(tagName);
 
-  //     const searchResult = filterPrompts(tagName);
-  //     setSearchedResults(searchResult);
-  //   };
+    const searchResult = filterPrompts(tagName);
+    setSearchedResults(searchResult);
+  };
+
   return (
     <section className="feed">
       <form className="relative w-full flex-center">
@@ -89,9 +90,12 @@ const Feed = () => {
 
       {/* All Prompts */}
       {searchText ? (
-        <PromptCardList data={searchedResults} handleTagClick={() => {}} />
+        <PromptCardList
+          data={searchedResults}
+          handleTagClick={handleTagClick}
+        />
       ) : (
-        <PromptCardList data={allPosts} handleTagClick={() => {}} />
+        <PromptCardList data={allPosts} handleTagClick={handleTagClick} />
       )}
     </section>
   );
