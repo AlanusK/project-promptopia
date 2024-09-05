@@ -11,12 +11,12 @@ export interface ProfileType {
   name: string;
   desc: string;
   data: array<PromptType>;
-  handleEdit: MouseEventHandler<HTMLParagraphElement>;
-  handleDelete: MouseEventHandler<HTMLParagraphElement>;
+  handleEdit?: MouseEventHandler<HTMLParagraphElement>;
+  handleDelete?: MouseEventHandler<HTMLParagraphElement>;
 }
 
 export type ParamsType = {
   params: {
-      id: string
-  }
-}
+    id: string;
+  };
+};
