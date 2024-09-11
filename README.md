@@ -1,4 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<b>Discover & Share AI-Powered Prompts</b>
+
+Promptopia is an open-source AI prompting tool for modern world to discover, create, and share creative prompts
+
+![image](https://github.com/user-attachments/assets/4d77c9aa-8596-442f-a62b-a1fda2871cb7)
+
+
+This is a [Next.js](https://nextjs.org/) project that highlights the key features of Next.js along with a comprehensive CRUD AI Prompt sharing system utilizing a MongoDB database and implementing NextAuth authentication.
+
+## Tech Stack
+
+- Next.js
+- MongoDB
+- NextAuth
+- TailwindCSS
+
+## Features
+
+👉 <b>Discover and Share AI Prompts:</b> Allow users to discover AI prompts shared by the community and create their own prompts to share with the world.
+
+👉 <b>Edit and Delete Created Prompts:</b> Users have the ability to edit their created prompts at any time and delete them when needed.
+
+👉 <b>Profile Page:</b> Each user gets a dedicated profile page showcasing all the prompts they've created, providing an overview of their contributions.
+
+👉 <b>View Other People's Profiles:</b> Users can explore the profiles of other creators to view the prompts they've shared, fostering a sense of community.
+
+👉 <b>Copy to Clipboard:</b> Implement a convenient "Copy to Clipboard" functionality for users to easily copy the AI prompts for their use.
+
+👉 <b>Search Prompts by Specific Tag:</b> Allow users to search for prompts based on specific tags, making it easier to find prompts related to specific topics.
+
+👉 <b>Google Authentication using NextAuth:</b> Enable secure Google authentication using NextAuth, ensuring a streamlined and trustworthy login experience.
+
+👉 <b>Responsive Website:</b> Develop a fully responsive website to ensure optimal user experience across various devices, from desktops to smartphones
+
+and many more, including code architecture and reusability
+
 
 ## Getting Started
 
@@ -17,20 +52,3 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
