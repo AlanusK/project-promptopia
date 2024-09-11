@@ -5,7 +5,7 @@ Promptopia is an open-source AI prompting tool for modern world to discover, cre
 ![image](https://github.com/user-attachments/assets/4d77c9aa-8596-442f-a62b-a1fda2871cb7)
 
 
-This is a [Next.js](https://nextjs.org/) project that highlights the key features of Next.js along with a comprehensive CRUD AI Prompt sharing system utilizing a MongoDB database and implementing NextAuth authentication.
+This is a [Next.js](https://nextjs.org/) project, i.e a full-stack application that highlights the key features of Next.js along with a comprehensive CRUD AI Prompt sharing system utilizing a MongoDB database and implementing NextAuth authentication.
 
 ## Tech Stack
 
